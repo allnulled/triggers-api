@@ -54,3 +54,11 @@ describe("Triggers API Test", function() {
 });
 ```
 
+## Use cases
+
+For lighter approach, take only [TriggersClass API](https://github.com/allnulled/triggers-class), which covers the programmatic base in less than 100 lines.
+
+For a more customizable, clearifier, reachable, etc. approach, take this API, which includes the [TriggersScriptParser](https://github.com/allnulled/triggers-script) global, and lets you load triggers by strings. But it takes aroung 2700 lines for the parser, mainly.
+
+You can choose.
+
