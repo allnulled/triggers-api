@@ -26,3 +26,31 @@ In html:
 
 The same as [TriggersClass API](https://github.com/allnulled/triggers-class) but with a `load(script)` method that accepts [TriggersScript Syntax](https://github.com/allnulled/triggers-script) to load the triggers from a string.
 
+## Test
+
+This is a test on how to register events by `load`, which is the only new thing from [TriggersClass API](https://github.com/allnulled/triggers-class):
+
+```js
+require(__dirname + "/triggers-api.bundled.js");
+
+describe("Triggers API Test", function() {
+  
+  it("can load triggers", async function() {
+    
+    const triggers = new TriggersApi();
+
+    global.counter = 5;
+
+    console.log(triggers);
+    console.log(triggers.load(`on event {{ "wherever" }} as {{ "TR002" }} then { always {{ global.counter = 50; }} }`));
+    console.log(triggers);
+
+    await triggers.emit("wherever");
+
+    console.log(global.counter);
+
+  });
+
+});
+```
+
