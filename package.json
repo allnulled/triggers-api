@@ -1,0 +1,13 @@
+{
+  "name": "triggers-api",
+  "version": "1.0.0",
+  "description": "Triggers pattern through class and script language for node.js or browser",
+  "main": "triggers-api.bundled.js",
+  "scripts": {
+    "build": "npx htmlbundler --list bundlelist.js --output triggers-api.bundled.js --id none --module 0 --wrap false && cp triggers-api.bundled.js triggers-api.js",
+    "test": "npm run build && npx mocha test.js"
+  },
+  "keywords": [],
+  "author": "allnulled",
+  "license": "WTFPL"
+}
